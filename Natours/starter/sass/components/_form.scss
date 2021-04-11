@@ -14,6 +14,12 @@
     display: block;
     color: inherit;
     transition: all 0.3s;
+    @include respone(tab-land) {
+      width: 70%;
+    }
+    @include respone(tab-port) {
+      width: 100%;
+    }
 
     &:focus {
       outline: none;
@@ -45,6 +51,13 @@
   &__radio-group {
     width: 49%;
     display: inline-block;
+    @include respone(tab-land) {
+      width: 40%;
+    }
+    @include respone(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
   &__radio-input {
     display: none;

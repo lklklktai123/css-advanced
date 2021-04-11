@@ -8,20 +8,30 @@
 html {
   font-size: 62.5%;
 
-  @include respone(phone) {
-    font-size: 50%;
+  // @include respone(phone) {
+  //   font-size: 50%;
+  // }
+  @include respone(big-desktop) {
+    font-size: 75%;
   }
-  @include respone(tab-port) {
-    font-size: 50%;
-  }
+
   @include respone(tab-land) {
     font-size: 56.25%;
   }
-  @include respone(big-desktop) {
-    font-size: 75%;
+
+  @include respone(tab-port) {
+    font-size: 50%;
   }
 }
 body {
   box-sizing: border-box;
+  padding: 0 3rem;
+  @include respone(tab-port) {
+    padding: 0;
+  }
+}
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
 }
 // defaut web =  16 px => % for 1 px = 1/16 * 100 = 6,25 => 50% = 50 / 6.25 = 8px

@@ -5,6 +5,13 @@
   margin-bottom: $gutter-vertical;
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+    @include respone(tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+  @include respone(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
   }
   @include clearFix;
   [class^='col-'] {
@@ -13,6 +20,14 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+      @include respone(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respone(tab-port) {
+      width: 100% !important;
     }
   }
   .col-1-of-2 {
